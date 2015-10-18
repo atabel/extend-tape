@@ -1,0 +1,29 @@
+{
+  "name": "extend-tape",
+  "version": "1.0.0",
+  "description": "Extends Tape with new assertions",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/babel-node node_modules/.bin/tape 'tests/**/*.js' | ./node_modules/.bin/faucet",
+    "lint": "eslint .",
+    "build": "./node_modules/.bin/babel -d dist/ src/",
+    "clean": "rm -r node_modules dist",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "test",
+    "tape",
+    "tap",
+    "assert",
+    "assertion",
+    "extend"
+  ],
+  "author": "atabel",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "eslint": "^1.7.1",
+    "faucet": "0.0.1",
+    "tape": "^4.2.1"
+  }
+}
