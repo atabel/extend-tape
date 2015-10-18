@@ -1,9 +1,13 @@
-[![npm version](https://badge.fury.io/js/extend-tape.svg)](https://badge.fury.io/js/extend-tape)
 # extend-tape
+
+[![npm](https://img.shields.io/npm/v/extend-tape.svg)](https://www.npmjs.com/package/extend-tape)
+[![npm](https://img.shields.io/npm/l/extend-tape.svg)](https://www.npmjs.com/package/extend-tape)
+
 Extends [Tape](https://github.com/substack/tape) with new assertions
+
 ## Install
-```console
-npm install --save-dev extend-tape
+```
+$ npm install --save-dev extend-tape
 ```
 ## How to use
 ```javascript
@@ -24,7 +28,7 @@ test('5 is bigger than 4', (t) => {
 ```
 
 ## Run tests
-```console
-npm install
-npm test
+```
+$ npm install
+$ npm test
 ```
