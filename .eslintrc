@@ -25,7 +25,6 @@ ecmaFeatures:
   superInFunctions: true
   templateStrings: true
   unicodeCodePointEscapes: true
-plugins: [react]
 rules:
   arrow-spacing: 2
   brace-style: [2, 1tbs, {allowSingleLine: true}]
