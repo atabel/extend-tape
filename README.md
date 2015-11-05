@@ -2,6 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/extend-tape.svg)](https://www.npmjs.com/package/extend-tape)
 [![npm](https://img.shields.io/npm/l/extend-tape.svg)](https://www.npmjs.com/package/extend-tape)
+[![Build Status](https://travis-ci.org/atabel/extend-tape.svg)](https://travis-ci.org/atabel/extend-tape)
 
 Extends [Tape](https://github.com/substack/tape) with new assertions
 
