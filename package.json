@@ -1,6 +1,6 @@
 {
   "name": "extend-tape",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Extends Tape with new assertions",
   "main": "dist/index.js",
   "scripts": {
@@ -20,9 +20,9 @@
   ],
   "author": "atabel",
   "license": "MIT",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/atabel/extend-tape.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atabel/extend-tape.git"
   },
   "devDependencies": {
     "babel": "^5.8.23",
