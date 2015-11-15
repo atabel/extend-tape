@@ -21,3 +21,11 @@ test('Can use destructuring with new assertions', ({biggerThan, end}) => {
     biggerThan(4, 5);
     end();
 });
+
+test('Subtests', (t) => {
+    t.test('New assertions are available in subtests', (st) => {
+        st.biggerThan(4, 5);
+        st.end();
+    });
+    t.end();
+});
