@@ -16,3 +16,8 @@ test('New assertion definitions are available in the t instance', (t) => {
     t.biggerThan(4, 5);
     t.end();
 });
+
+test('Can use destructuring with new assertions', ({biggerThan, end}) => {
+    biggerThan(4, 5);
+    end();
+});
