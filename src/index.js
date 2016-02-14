@@ -5,9 +5,9 @@ const addAssertions = (tape, assertions) => {
         args = args.map(arg => {
             if (typeof arg === 'function') {
                 return t => {
-                    Object.keys(assertions).forEach(assertName =>
-                        t[assertName] = assertions[assertName].bind(t)
-                    );
+                    Object.keys(assertions).forEach(assertName => {
+                        t[assertName] = assertions[assertName].bind(t);
+                    });
 
                     t.test = addAssertions(t.test, assertions);
 
