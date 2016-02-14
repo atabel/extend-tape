@@ -1,11 +1,26 @@
-export default function addAssertions (tape, assertions) {
-    return (testName, testBody) => tape(testName, t => {
-        for (let prop in assertions) {
-            t[prop] = assertions[prop].bind(t);
-        }
+import extend from 'object-assign';
 
-        t.test = addAssertions(t.test, assertions);
+const addAssertions = (tape, assertions) => {
+    const myTape = (...args) => {
+        args = args.map(arg => {
+            if (typeof arg === 'function') {
+                return t => {
+                    Object.keys(assertions).forEach(assertName =>
+                        t[assertName] = assertions[assertName].bind(t)
+                    );
 
-        testBody.call(t, t);
-    });
-}
+                    t.test = addAssertions(t.test, assertions);
+
+                    arg.call(t, t);
+                };
+            } else {
+                return arg;
+            }
+        });
+        tape(...args);
+    };
+
+    return extend(myTape, tape);
+};
+
+export default addAssertions;

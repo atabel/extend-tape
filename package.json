@@ -29,5 +29,8 @@
     "eslint": "^1.7.1",
     "faucet": "0.0.1",
     "tape": "^4.2.1"
+  },
+  "dependencies": {
+    "object-assign": "^4.0.1"
   }
 }
